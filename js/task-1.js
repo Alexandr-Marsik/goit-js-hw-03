@@ -4,10 +4,9 @@
 //лише пробілами Усі символи slug повинні бути в нижньому
 //регістрі Усі слова slug повинні бути розділені тире.
 function slugify(title) {
-  const textLowerCase = title.toLowerCase();
-  const result = textLowerCase.split(' ');
-  return result.join('-');
+  return title.toLowerCase().split(' ').join('-');
 }
+
 console.log(slugify('Arrays for beginners')); // "arrays-for-beginners"
 console.log(slugify('English for developer')); // "english-for-developer"
 console.log(slugify('Ten secrets of JavaScript')); // "ten-secrets-of-javascript"
